@@ -1,4 +1,1 @@
-
-
-
-include 'PdfRendererBasicSample'
+include 'Application'

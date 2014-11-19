@@ -193,6 +193,15 @@ public class PdfRendererBasicFragment extends Fragment implements View.OnClickLi
         getActivity().setTitle(getString(R.string.app_name_with_index, index + 1, pageCount));
     }
 
+    /**
+     * Gets the number of pages in the PDF. This method is marked as public for testing.
+     *
+     * @return The number of pages.
+     */
+    public int getPageCount() {
+        return mPdfRenderer.getPageCount();
+    }
+
     @Override
     public void onClick(View view) {
         switch (view.getId()) {

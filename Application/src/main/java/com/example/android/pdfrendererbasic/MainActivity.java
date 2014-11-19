@@ -24,13 +24,16 @@ import android.view.MenuItem;
 
 public class MainActivity extends Activity {
 
+    public static final String FRAGMENT_PDF_RENDERER_BASIC = "pdf_renderer_basic";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_real);
         if (savedInstanceState == null) {
             getFragmentManager().beginTransaction()
-                    .add(R.id.container, new PdfRendererBasicFragment())
+                    .add(R.id.container, new PdfRendererBasicFragment(),
+                            FRAGMENT_PDF_RENDERER_BASIC)
                     .commit();
         }
     }
