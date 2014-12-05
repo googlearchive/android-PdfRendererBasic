@@ -1,7 +1,35 @@
 Android PdfRendererBasic Sample
 ===================================
 
-This sample demonstrates how to use PdfRenderer to display PDF documents on the screen.
+This sample demonstrates how to display PDF document on screen using
+the PdfRenderer introduced in Android 5.0 Lollipop.
+
+Introduction
+------------
+
+You can now render PDF document pages into bitmap images for printing by using
+the new [PdfRenderer][1] class. You must specify a [ParcelFileDescriptor][2]
+that is seekable (that is, the content can be randomly accessed) on which the
+system writes the the printable content. Your app can obtain a page for
+rendering with [openPage()][3], then call [render()][4] to turn the opened
+[PdfRenderer.Page][5] into a bitmap.
+
+This sample loads the PDF from assets. Contents of assets are compressed by
+default, but we disable it since PdfRenderer class cannot handle it.
+
+```groovy
+android {
+    aaptOptions {
+        noCompress "pdf"
+    }
+}
+```
+
+[1]: https://developer.android.com/reference/android/graphics/pdf/PdfRenderer.html
+[2]: https://developer.android.com/reference/android/os/ParcelFileDescriptor.html
+[3]: https://developer.android.com/reference/android/graphics/pdf/PdfRenderer.html#openPage(int)
+[4]: https://developer.android.com/reference/android/graphics/pdf/PdfRenderer.Page.html#render(android.graphics.Bitmap, android.graphics.Rect, android.graphics.Matrix, int)
+[5]: https://developer.android.com/reference/android/graphics/pdf/PdfRenderer.Page.html
 
 Pre-requisites
 --------------
@@ -9,6 +37,11 @@ Pre-requisites
 - Android SDK v21
 - Android Build Tools v21.1.1
 - Android Support Repository
+
+Screenshots
+-------------
+
+<img src="screenshots/main.png" height="400" alt="Screenshot"/> 
 
 Getting Started
 ---------------

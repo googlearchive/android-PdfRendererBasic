@@ -5,8 +5,12 @@
 ---
 status:       PUBLISHED
 technologies: [Android]
-categories:   [UI]
+categories:   [UI, Graphics]
 languages:    [Java]
 solutions:    [Mobile]
 github:       android-PdfRendererBasic
+level:        BEGINNER
+icon:         screenshots/icon-web.png
+apiRefs:
+    - android:android.graphics.pdf.PdfRenderer
 license: apache2
