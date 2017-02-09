@@ -56,7 +56,4 @@ android {
 
     }
 
-    aaptOptions {
-        noCompress "pdf"
-    }
 }
