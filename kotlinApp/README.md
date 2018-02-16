@@ -1,6 +1,6 @@
 
-Android PdfRendererBasic Sample
-===================================
+Android PdfRendererBasic Sample (Kotlin)
+========================================
 
 This sample demonstrates how to display PDF document on screen using
 the PdfRenderer introduced in Android 5.0 Lollipop.
@@ -29,13 +29,12 @@ Pre-requisites
 --------------
 
 - Android SDK 27
-- Android Build Tools v27.0.2
 - Android Support Repository
 
 Screenshots
 -------------
 
-<img src="screenshots/main.png" height="400" alt="Screenshot"/> 
+<img src="screenshots/main.png" height="400" alt="Screenshot"/>
 
 Getting Started
 ---------------
